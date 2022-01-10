@@ -1,0 +1,24 @@
+name: build
+
+on:
+  push:
+    paths:
+      - Dockerfile
+      - .github/workflows/backstage.yaml
+    branches:
+      - 'master'
+  pull_request:
+    paths:
+      - Dockerfile
+      - .github/workflows/backstage.yaml
+    branches:
+      - 'master'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: build
+        run: yarn build
