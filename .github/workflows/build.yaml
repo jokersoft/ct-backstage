@@ -7,18 +7,23 @@ on:
       - .github/workflows/backstage.yaml
     branches:
       - 'master'
+      - 'deploy'
   pull_request:
     paths:
       - Dockerfile
       - .github/workflows/backstage.yaml
     branches:
       - 'master'
+      - 'deploy'
 
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: yarn build
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm -v
