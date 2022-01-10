@@ -27,3 +27,12 @@ jobs:
         with:
           node-version: '14'
       - run: npm -v
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
+
+
+#      - run: |
+#  curl -fsSL -o ~/bin/yarn \
+#  https://github.com/yarnpkg/yarn/releases/download/v1.22.17/yarn-1.22.17.js
+#  chmod +x ~/bin/yarn
