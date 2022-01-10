@@ -41,15 +41,15 @@ jobs:
           node-version: "14"
           cache: yarn
 
-      - run: node -v
+      - name: Versions check
+        run: node -v
       - run: npm -v
       - run: yarn -v
 
-      - name: Uninstall Yarn
-        if: always()
-        run: npm uninstall -g yarn
+      - name: Yarn prepare
+        run: yarn install --frozen-lockfile
+      - run: yarn tsc
+      - run: yarn build
 
-#      - run: |
-#  curl -fsSL -o ~/bin/yarn \
-#  https://github.com/yarnpkg/yarn/releases/download/v1.22.17/yarn-1.22.17.js
-#  chmod +x ~/bin/yarn
+      - name: Uninstall Yarn
+        run: npm uninstall -g yarn
