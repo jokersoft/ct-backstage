@@ -1,0 +1,23 @@
+version: '3'
+services:
+  backstage:
+    image: yarche/ct-backend:${TAG:-local}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_USER: postgres
+      AUTH_GOOGLE_CLIENT_ID: AUTH_GOOGLE_CLIENT_ID
+      AUTH_GOOGLE_CLIENT_SECRET: AUTH_GOOGLE_CLIENT_SECRET
+      BACKEND_SECRET: BACKEND_SECRET
+    command: ["node", "packages/backend", "--config", "app-config.helm.yaml"]
+    ports:
+      - '7007:7007'
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      # NOT RECOMMENDED for a production environment. Trusts all incoming connections.
+      POSTGRES_HOST_AUTH_METHOD: trust
