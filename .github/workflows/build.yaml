@@ -8,6 +8,8 @@ on:
     branches:
       - 'master'
       - 'deploy'
+    tags:
+      - 'v*.*.*'
   pull_request:
     paths:
       - Dockerfile
