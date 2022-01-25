@@ -1,6 +1,7 @@
 version: '3'
 services:
   backstage:
+#    image: yarche/ct-backend:c760b5b
     image: yarche/ct-backend:${TAG:-local}
     build:
       context: .
