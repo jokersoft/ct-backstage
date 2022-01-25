@@ -59,13 +59,16 @@ jobs:
         env:
           TAG: ${{ github.ref_name }}
         run: |
-          echo ${GITHUB_SHA::7}
           docker build -t yarche/ct-backend:latest .
           docker tag yarche/ct-backend:latest yarche/ct-backend:${GITHUB_SHA::7}
           docker tag yarche/ct-backend:latest yarche/ct-backend:${TAG}
       - name: Docker Push
+        env:
+          TAG: ${{ github.ref_name }}
         run: |
-          docker push yarche/ct-backend
+          docker push yarche/ct-backend:latest
+          docker push yarche/ct-backend:${GITHUB_SHA::7}
+          docker push yarche/ct-backend:${TAG}
 
 # Clean-up
       - name: Uninstall Yarn
