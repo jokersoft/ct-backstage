@@ -8,7 +8,7 @@ image:
   repository: yarche/ct-backend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "helm-1.0.0"
+  tag: "c760b5b"
 
 imagePullSecrets: []
 nameOverride: "backstage"

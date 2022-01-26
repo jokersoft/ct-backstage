@@ -16,7 +16,6 @@ on:
       - .github/workflows/backstage.yaml
     branches:
       - 'master'
-      - 'deploy'
 
   workflow_dispatch:
 

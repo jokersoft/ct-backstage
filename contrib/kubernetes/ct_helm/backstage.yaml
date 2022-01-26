@@ -15,8 +15,7 @@ spec:
     spec:
       containers:
         - name: backstage
-          image: yarche/ct-backend:helm-1.0.0
-#          image: yarche/ct-backend:tmp-1.0.0
+          image: yarche/ct-backend:c760b5b
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
