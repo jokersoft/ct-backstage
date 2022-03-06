@@ -59,10 +59,14 @@ ingress:
   #      - chart-example.local
 
 env:
-  - name: TEST_ENV
-    value: TEST_ENV_VALUE
-  - name: TEST_ENV_2
-    value: TEST_ENV_VALUE_2
+  - name: POSTGRES_HOST
+    value: postgres
+  - name: POSTGRES_PORT
+    value: 5432
+  - name: POSTGRES_USER
+    value: postgres
+  - name: POSTGRES_PASSWORD
+    value: secrect
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
