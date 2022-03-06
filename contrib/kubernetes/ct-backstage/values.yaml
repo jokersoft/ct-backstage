@@ -10,7 +10,7 @@ image:
   #  repository: nginx
   #  tag: latest
   repository: yarche/ct-backend
-  tag: c760b5b
+  tag: d34923d
 
 imagePullSecrets: []
 nameOverride: ""
@@ -60,7 +60,7 @@ ingress:
 
 env:
   - name: POSTGRES_HOST
-    value: postgres
+    value: postgres.default.svc.cluster.local
   - name: POSTGRES_PORT
     value: 5432
   - name: POSTGRES_USER
