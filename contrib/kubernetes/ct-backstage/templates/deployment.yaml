@@ -59,13 +59,6 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - name: postgres
-          image: postgres
-          env:
-            - name: POSTGRES_HOST_AUTH_METHOD
-              value: "trust"
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

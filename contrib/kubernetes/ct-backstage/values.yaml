@@ -10,7 +10,7 @@ image:
   #  repository: nginx
   #  tag: latest
   repository: yarche/ct-backend
-  tag: d34923d
+  tag: 573a77b
 
 imagePullSecrets: []
 nameOverride: ""
@@ -60,13 +60,13 @@ ingress:
 
 env:
   - name: POSTGRES_HOST
-    value: postgres.default.svc.cluster.local
+    value: postgres-master
   - name: POSTGRES_PORT
     value: 5432
   - name: POSTGRES_USER
     value: postgres
   - name: POSTGRES_PASSWORD
-    value: secrect
+    value: password
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-master
+spec:
+  selector:
+    matchLabels:
+      app: postgres-master
+      tier: database
+  template:
+    metadata:
+      labels:
+        app: postgres-master
+        tier: database
+    spec:
+      containers:
+        - name: postgres-master
+          image: postgres:latest
+          ports:
+            - containerPort: 5432
+          env:
+#            - name: POSTGRES_PASSWORD
+#              value: password
+            - name: POSTGRES_HOST_AUTH_METHOD
+              value: trust
