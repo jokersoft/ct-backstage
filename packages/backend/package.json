@@ -26,7 +26,7 @@
     "@backstage/plugin-scaffolder-backend": "^0.15.19",
     "@backstage/plugin-search-backend": "^0.3.0",
     "@backstage/plugin-search-backend-node": "^0.4.3",
-    "@backstage/plugin-techdocs-backend": "^0.12.2",
+    "@backstage/plugin-techdocs-backend": "^0.14.1",
     "@gitbeaker/node": "^34.6.0",
     "@octokit/rest": "^18.5.3",
     "app": "0.0.0",
@@ -34,7 +34,7 @@
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
     "knex": "^0.21.6",
-    "pg": "^8.7.1",
+    "pg": "^8.7.3",
     "winston": "^3.2.1"
   },
   "devDependencies": {

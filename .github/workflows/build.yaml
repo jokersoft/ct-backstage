@@ -7,14 +7,14 @@ on:
       - .github/workflows/backstage.yaml
     branches:
       - 'master'
-      - 'deploy'
+    tags:
+      - 'v*.*.*'
   pull_request:
     paths:
       - Dockerfile
       - .github/workflows/backstage.yaml
     branches:
       - 'master'
-      - 'deploy'
 
   workflow_dispatch:
 
@@ -37,10 +37,6 @@ jobs:
       - name: Install Yarn
         run: npm install -g yarn
 
-#      - uses: borales/actions-yarn@v2.3.0
-#        with:
-#          cmd: install # will run `yarn install` command
-
       - name: Setup Nodejs with yarn caching
         uses: actions/setup-node@v2
         with:
@@ -62,12 +58,14 @@ jobs:
           TAG: ${{ github.ref_name }}
         run: |
           docker build -t yarche/ct-backend:latest .
+          docker tag yarche/ct-backend:latest yarche/ct-backend:${GITHUB_SHA::7}
           docker tag yarche/ct-backend:latest yarche/ct-backend:${TAG}
       - name: Docker Push
         env:
           TAG: ${{ github.ref_name }}
         run: |
           docker push yarche/ct-backend:latest
+          docker push yarche/ct-backend:${GITHUB_SHA::7}
           docker push yarche/ct-backend:${TAG}
 
 # Clean-up

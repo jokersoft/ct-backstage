@@ -1,18 +1,20 @@
-# Default values for backstage.
+# Default values for ct-backstage.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: yarche/ct-backend
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "helm-1.0.0"
+  #  repository: nginx
+  #  tag: latest
+  repository: yarche/ct-backend
+  tag: b395539
 
 imagePullSecrets: []
-nameOverride: "backstage"
-fullnameOverride: "backstage"
+nameOverride: ""
+fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -21,7 +23,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "backstage-helm-sa"
+  name: ""
 
 podAnnotations: {}
 
@@ -37,7 +39,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 7007
 
 ingress:
@@ -55,6 +57,18 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
+
+env:
+  - name: POSTGRES_HOST
+    value: postgres-master
+  - name: POSTGRES_PORT
+    value: 5432
+  - name: POSTGRES_USER
+    value: postgres
+  - name: POSTGRES_PASSWORD
+    value: password
+  - name: GITHUB_TOKEN
+    value: ${GITHUB_TOKEN}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

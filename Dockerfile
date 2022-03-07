@@ -1,5 +1,8 @@
 FROM node:14-buster-slim
 
+#RUN apt-get update && \
+#    apt-get install -y git postgresql
+
 WORKDIR /app
 
 # Copy repo skeleton first, to avoid unnecessary docker cache invalidation.
@@ -13,9 +16,5 @@ RUN yarn install --frozen-lockfile --production --network-timeout 300000 && rm -
 # Then copy the rest of the backend bundle, along with any other files we might want.
 COPY packages/backend/dist/bundle.tar.gz app-config.yaml ./
 RUN tar xzf bundle.tar.gz && rm bundle.tar.gz
-
-# TODO: rm
-COPY app-config.build.yaml ./
-COPY app-config.helm.yaml ./
 
 CMD ["node", "packages/backend", "--config", "app-config.yaml"]
