@@ -1,5 +1,7 @@
 FROM node:14-buster-slim
 
+RUN apt-get install -y git postgresql
+
 WORKDIR /app
 
 # Copy repo skeleton first, to avoid unnecessary docker cache invalidation.
