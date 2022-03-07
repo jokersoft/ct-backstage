@@ -21,7 +21,7 @@
     "@backstage/plugin-scaffolder": "^0.11.17",
     "@backstage/plugin-search": "^0.5.4",
     "@backstage/plugin-tech-radar": "^0.5.1",
-    "@backstage/plugin-techdocs": "^0.12.13",
+    "@backstage/plugin-techdocs": "^0.15.0",
     "@backstage/plugin-user-settings": "^0.3.15",
     "@backstage/theme": "^0.2.14",
     "@internal/plugin-health-checker": "^0.1.0",

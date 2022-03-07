@@ -7,7 +7,6 @@ on:
       - .github/workflows/backstage.yaml
     branches:
       - 'master'
-      - 'deploy'
     tags:
       - 'v*.*.*'
   pull_request:

@@ -12,6 +12,7 @@ services:
       AUTH_GOOGLE_CLIENT_ID: AUTH_GOOGLE_CLIENT_ID
       AUTH_GOOGLE_CLIENT_SECRET: AUTH_GOOGLE_CLIENT_SECRET
       BACKEND_SECRET: BACKEND_SECRET
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
     command: ["node", "packages/backend", "--config", "app-config.yaml"]
     ports:
       - '7007:7007'
