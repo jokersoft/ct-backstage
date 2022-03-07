@@ -67,6 +67,8 @@ env:
     value: postgres
   - name: POSTGRES_PASSWORD
     value: password
+  - name: GITHUB_TOKEN
+    value: TBD
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
