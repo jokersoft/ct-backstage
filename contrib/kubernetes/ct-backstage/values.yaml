@@ -10,7 +10,7 @@ image:
   #  repository: nginx
   #  tag: latest
   repository: yarche/ct-backend
-  tag: b395539
+  tag: bc14697
 
 imagePullSecrets: []
 nameOverride: ""
