@@ -1,0 +1,6 @@
+app:
+  title: TripActions Backstage
+  baseUrl: http://localhost:3000
+
+organization:
+  name: TripActions
