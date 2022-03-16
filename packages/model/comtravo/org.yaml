@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: comtravo
+  description: The comtravo organization
+  links:
+    - url: http://www.comtravo.com/
+      title: Website
+spec:
+  type: company
+  profile:
+    displayName: Comtravo
+  children: [engineering]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: teams
+  description: Comtravo engineering teams
+spec:
+  targets:
+    - ./engineering.yaml
+    - ./team-arch.yaml
+    - ./team-cake.yaml
+    - ./team-sherpa.yaml
+    - ./team-vision.yaml
+    - ./team-data.yaml
+    

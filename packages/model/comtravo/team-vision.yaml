@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: vision
+  description: Team Vision
+spec:
+  type: team
+  parent: engineering
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: martin.dobberstein
+spec:
+  memberOf: [vision]

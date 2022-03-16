@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: sherpa
+  description: Team Sherpa
+spec:
+  type: team
+  parent: engineering
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: paul.backhouse
+spec:
+  memberOf: [sherpa]
