@@ -3,6 +3,9 @@ FROM node:14-buster-slim
 #RUN apt-get update && \
 #    apt-get install -y git postgresql
 
+#RUN apt-get update && apt-get install -y python3 python3-pip
+#RUN pip3 install mkdocs-techdocs-core==0.2.3
+
 WORKDIR /app
 
 # Copy repo skeleton first, to avoid unnecessary docker cache invalidation.
