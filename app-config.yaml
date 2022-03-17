@@ -1,6 +1,6 @@
 app:
   title: Comtravo Backstage App
-  baseUrl: http://localhost:3000
+  baseUrl: ${BACKSTAGE_BASE_URL}:3000
 
 organization:
   name: Comtravo
@@ -11,7 +11,7 @@ backend:
   # auth:
   #   keys:
   #     - secret: ${BACKEND_SECRET}
-  baseUrl: http://localhost:7007
+  baseUrl: ${BACKSTAGE_BASE_URL}:7007
   listen:
     port: 7007
   csp:
@@ -19,7 +19,7 @@ backend:
     # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
     # Default Helmet Content-Security-Policy values can be removed by setting the key to false
   cors:
-    origin: ${CORS_ORIGIN}
+    origin: ${BACKSTAGE_BASE_URL}
     methods: [GET, POST, PUT, DELETE]
     credentials: true
   # config options: https://node-postgres.com/api/client
