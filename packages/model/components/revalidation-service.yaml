@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: revalidation-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/revalidation
+      title: Github Repo
+      icon: article
+  description: Indicates whether an offer option is still bookable for the given price (200), for a different price (409) or no longer at all (410).
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - revalidation-api

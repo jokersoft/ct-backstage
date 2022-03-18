@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: checkout
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/checkout
+      title: Github Repo
+      icon: article
+  description: A tool for customers to confirm offers that Ops prepared. It's usually accessed through links from offer emails.
+
+spec:
+  type: service
+  lifecycle: production
+  owner: cake

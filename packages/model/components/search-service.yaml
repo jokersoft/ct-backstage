@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: search-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/flight-search
+      title: Github Repo - Flight
+      icon: article
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/hotel-search
+      title: Github Repo - Hotel
+      icon: article
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/train-search
+      title: Github Repo - Train
+      icon: article
+  description: Search provides a programmatic interface to the suppliers. Currently covers flight, hotel and train verticals. The input is usually a search context (time, capacity, filters), output is a limited set of bookable supply (tickets, rooms etc).
+
+spec:
+  type: service
+  lifecycle: production
+  owner: sherpa
+  providesApis:
+    - flight-search-api
+    - hotel-search-api
+    - train-search-api

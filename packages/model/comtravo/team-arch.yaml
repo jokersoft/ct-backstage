@@ -14,3 +14,17 @@ metadata:
   name: grzegorz.krumpholz
 spec:
   memberOf: [arch]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ruwan.geeganage
+spec:
+  memberOf: [arch]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ivan.spasojevic
+spec:
+  memberOf: [arch]

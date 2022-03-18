@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: addon-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/addon
+      title: Github Repo
+      icon: article
+  description: Similar to search addon provides an interface to the suppliers. The intention is to make additional, 'add-on' features book- and priceable, e.g. extra luggage for flight tickets, train seats etc. Currently covers addon flight luggage, flight priority boarding, flight seats, train seats.
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - addon-api

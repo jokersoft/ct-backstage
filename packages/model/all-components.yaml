@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: all-components
+  description: A collection of all Comtravo components (e.g., web services, APIs, libraries, tools)
+spec:
+  targets:
+    - ./components/addon-service.yaml
+    - ./components/booking-service.yaml
+    - ./components/crm-service.yaml
+    - ./components/document-storage-service.yaml
+    - ./components/invoice-service.yaml
+    - ./components/meta-data-service.yaml
+    - ./components/payment-service.yaml
+    - ./components/revalidation-service.yaml
+    - ./components/search-service.yaml
+    - ./components/ticket-service.yaml
+    - ./components/my-comtravo.yaml
+    - ./components/cockpit.yaml
+    - ./components/checkout.yaml
+    - ./components/coma.yaml
+    - ./components/ct-lib.yaml
+    - ./components/ct-lib-api.yaml

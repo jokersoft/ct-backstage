@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cockpit
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/cockpit
+      title: Github Repo
+      icon: article
+  description: The main (internal) tool for Ops and Finance. Written in AngularJS and Angular Material.
+
+spec:
+  type: website
+  lifecycle: production
+  owner: user:ramakrishna.talatam

@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: coma
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/coma
+      title: Github Repo
+      icon: article
+  description: The (internal) Comtravo Annotation tool.
+
+spec:
+  type: website
+  lifecycle: production
+  owner: user:sebastian.mika

@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-comtravo
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/my-comtravo
+      title: Github Repo
+      icon: article
+  description: Our main application for customers. Allows onboarding, company and traveler data management, access to reports as well as OBE bookings.
+
+spec:
+  type: website
+  lifecycle: production
+  owner: user:ivan.spasojevic

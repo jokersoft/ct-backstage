@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ct-lib-api
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/
+      title: Github Repo
+      icon: article
+  description: Provides an JSON RPC API to interact with CT lib layer.
+
+spec:
+  type: rpc
+  lifecycle: production
+  owner: sherpa

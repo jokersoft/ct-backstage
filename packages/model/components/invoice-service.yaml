@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: invoice-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/invoice
+      title: Github Repo
+      icon: article
+  description: A service which handles invoice calculations.
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - invoice-api

@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ct-lib
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/lib
+      title: Github Repo
+      icon: article
+
+spec:
+  type: library
+  lifecycle: production
+  owner: sherpa
+  consumeApis:
+    - ct-lib-api

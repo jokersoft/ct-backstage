@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: meta-data-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/meta_data
+      title: Github Repo
+      icon: article
+  description: Provides a REST interface to enumerations and data that are used throughout the system, e.g. airports, airlines and countries.
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - meta-data-api

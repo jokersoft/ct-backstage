@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ticket-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/ticket
+      title: Github Repo
+      icon: article
+  description: A 'service' that renders all kinds of files, e.g. invoices, cost assumptions, reports, itineraries, calendar invites etc.
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - ticket-api

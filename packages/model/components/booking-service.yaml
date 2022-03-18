@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: booking-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/booking
+      title: Github Repo
+      icon: article
+      
+
+  description: A REST service that handles bookings and offers, i.e. transactional data. Bookings and offers document what was booked by / offered to the customer, e.g. which tickets we booked for the customer.
+spec:
+  type: service
+  lifecycle: production
+  owner: user:ruwan.geeganage
+  providesApis:
+    - booking-api

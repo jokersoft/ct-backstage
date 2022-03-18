@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: crm-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/crm
+      title: Github Repo
+      icon: article
+  description: A REST service that handles travelers and bookings, i.e. master data.
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - crm-api

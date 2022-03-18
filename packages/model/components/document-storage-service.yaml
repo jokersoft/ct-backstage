@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: document-storage-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/document_storage
+      title: Github Repo
+      icon: article
+  description: A tiny service that sits on top of S3 and handles permissions and file access. Used e.g. to handle vouchers and Comtravo generated invoices.
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - document-storage-api

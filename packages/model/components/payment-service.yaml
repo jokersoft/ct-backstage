@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payment-service
+  links:
+    - url: https://github.com/comtravo/ct-backend/tree/master/js/service/payment
+      title: Github Repo
+      icon: article
+  description: The payment service handles 2 major use cases - 1) acts as a Stripe backend (e.g. stores Stripe payments, Stripe users, handles S2S callbacks) and 2) handles purchases through MyCT through the checkout resource (revalidates, charges stripe, creates confirmed offer).
+
+spec:
+  type: service
+  lifecycle: production
+  owner: vision
+  providesApis:
+    - payment-api
